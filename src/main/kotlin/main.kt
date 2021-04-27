@@ -98,11 +98,15 @@ fun HashResultDisplay(hashResult: HashResult?) {
             Text("Select file to compute the hashes")
         } else {
             Row {
-                HashResultCard("SHA-1 hash", hashResult.sha1sum,
-                modifier = Modifier.weight(1f).padding(vertical = 20.dp).padding(start = 20.dp))
+                HashResultCard(
+                    "SHA-1 hash", hashResult.sha1sum,
+                    modifier = Modifier.weight(1f).padding(vertical = 20.dp).padding(start = 20.dp)
+                )
                 Spacer(Modifier.requiredWidth(20.dp))
-                HashResultCard("SHA-256 hash", hashResult.sha256sum,
-                    modifier = Modifier.weight(1f).padding(vertical = 20.dp).padding(end = 20.dp))
+                HashResultCard(
+                    "SHA-256 hash", hashResult.sha256sum,
+                    modifier = Modifier.weight(1f).padding(vertical = 20.dp).padding(end = 20.dp)
+                )
             }
         }
     }
