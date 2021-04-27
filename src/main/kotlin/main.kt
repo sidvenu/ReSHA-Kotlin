@@ -20,7 +20,7 @@ import java.io.File
 import java.util.*
 
 fun main() = Window {
-    var fileName by remember { mutableStateOf("/home/sidvenu/.gradle/gradle.properties") }
+    var fileName by remember { mutableStateOf("") }
     var hashResult by remember { mutableStateOf<HashResult?>(null) }
 
     LaunchedEffect(fileName) {
